@@ -1,0 +1,199 @@
+
+/* Fondo y overlay */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: url('ferxxo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+/* Perfil usuario */
+.user-profile {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    z-index: 100;
+}
+.user-profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+.user-profile span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 32px;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.8);
+}
+
+/* Barra de progreso */
+.progress-container {
+    max-width: 700px;
+    margin: 10px auto 30px auto;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    height: 25px;
+    overflow: hidden;
+}
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #1E7200;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    font-weight: bold;
+    transition: width 0.5s;
+}
+
+/* Tarjetas de día */
+.day {
+    max-width: 700px;
+    margin: 15px auto;
+    background: #393939d9;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    color: #f6f2f2;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.day:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+.day-header {
+    background-color: #104904;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 20px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+/* Tablas responsivas */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 380px;
+}  
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+th { background-color: #1E7200; color: white; }
+tr:last-child td { border-bottom: none; }
+input[type="checkbox"] { transform: scale(1.4); cursor: pointer; transition: 0.2s; }
+input[type="checkbox"]:checked { accent-color: #ffdd59; }
+
+/* Botón Reset flotante (abajo a la derecha) */
+.reset-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    font-size: 20px;
+    background-color: #104904;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s, background 0.3s;
+    z-index: 100;
+}
+.reset-button:hover {
+    background-color: #1E7200;
+    transform: scale(1.1);
+}
+
+/* Botón Inicio (abajo a la izquierda) */
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 15px;
+    font-size: 20px;
+    background-color: #104904;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s, background 0.3s;
+    z-index: 100;
+}
+.back-button:hover {
+    background-color: #1E7200;
+    transform: scale(1.1);
+}
+
+/* Sección de estadísticas */
+.stats {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Confetti */
+@keyframes confetti {
+    0% { transform: translateY(0) rotate(0deg); opacity:1;}
+    100% { transform: translateY(600px) rotate(360deg); opacity:0;}
+}
+.confetti-piece {
+    position: fixed;
+    width: 10px; height: 10px;
+    background-color: #12af41;
+    top: 0; left: 50%;
+    opacity: 0;
+    z-index: 999;
+    animation-name: confetti;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+/* Responsivo móvil mejorado */
+@media(max-width:500px){
+    h1{font-size:24px;}
+    .day{margin:10px auto; border-radius:12px;}
+    .day-header{font-size:16px; padding:10px;}
+    table{font-size:13px; min-width:320px;}
+    th,td{padding:6px;}
+    input[type="checkbox"]{transform:scale(1.2);}
+    .reset-button,.back-button{padding:12px; font-size:16px;}
+    .user-profile img{width:30px;height:30px;}
+    .user-profile span{font-size:14px;}
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="pagicong.png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="genaro.css">
+<title>Rutina - Genaro</title>
+</head>
+<body>
+
+<!-- Perfil usuario -->
+<div class="user-profile">
+    <img src="iconog.jpeg" alt="Genaro">
+    <span>Genaro</span>
+</div>
+
+<br><br><br>
+<h1>Rutina Semanal</h1>
+
+<!-- Barra de progreso de fecha -->
+<div class="time-progress-container">
+    <div class="time-progress-bar" id="timeProgressBar">0% - 1</div>
+</div>
+
+<!-- Estadísticas -->
+<div class="stats" id="stats">
+    Ejercicios completados: 0 / 0
+</div>
+
+<!-- LUNES -->
+<div class="day">
+    <div class="day-header"><h1>Lunes</h1> Pecho + Tríceps</div>
+    <div class="table-container">
+        <table>
+            <tr><th>Ejercicio</th><th>Series</th><th>Repeticiones</th><th>Hecho</th></tr>
+            <tr><td>Press banca plano con barra</td><td>4</td><td>8-12</td><td><input type="checkbox" data-id="lunes1"></td></tr>
+            <tr><td>Press inclinado con mancuernas</td><td>4</td><td>8-12</td><td><input type="checkbox" data-id="lunes2"></td></tr>
+            <tr><td>Fondos en paralelas (o en bancos)</td><td>3</td><td>8-12</td><td><input type="checkbox" data-id="lunes3"></td></tr>
+            <tr><td>Aperturas con mancuernas</td><td>3</td><td>10-12</td><td><input type="checkbox" data-id="lunes4"></td></tr>
+            <tr><td>Extensiones de triceps en polea alta</td><td>3</td><td>10-12</td><td><input type="checkbox" data-id="lunes5"></td></tr>
+            <tr><td>Patada de triceps con mancuerna</td><td>3</td><td>10-12</td><td><input type="checkbox" data-id="lunes6"></td></tr>
+        </table>
+    </div>
+</div>
+
+<!-- MARTES -->
+<div class="day">
+    <div class="day-header"><h1>Martes</h1> - Espalda + Biceps</div>
+    <div class="table-container">
+        <table>
+            <tr><th>Ejercicio</th><th>Series</th><th>Repeticiones</th><th>Hecho</th></tr>
+            <tr><td>Jalón al pecho en polea</td><td>4</td><td>8-12</td><td><input type="checkbox" data-id="martes1"></td></tr>
+            <tr><td>Remo con barra o mancuerna</td><td>4</td><td>8-12</td><td><input type="checkbox" data-id="martes2"></td></tr>
+            <tr><td>Peso muerto (ligero al principio)</td><td>4</td><td>6-10</td><td><input type="checkbox" data-id="martes3"></td></tr>
+            <tr><td>Curl de bíceps con barra o mancuerna</td><td>3</td><td>8-12</td><td><input type="checkbox" data-id="martes4"></td></tr>
+            <tr><td>Curl martilla con mancuerna</td><td>3</td><td>8-12</td><td><input type="checkbox" data-id="martes5"></td></tr>
+            <tr><td>Curl en banco inclinado</td><td>3</td><td>8-12</td><td><input type="checkbox" data-id="martes6"></td></tr>
+        </table>
+    </div>
+</div>
+
+<!-- MIÉRCOLES -->
+<div class="day">
+    <div class="day-header"><h1>Miércoles</h1> - Pierna + Abdomen</div>
+    <div class="table-container">
+        <table>
+            <tr><th>Ejercicio</th><th>Series</th><th>Repeticiones</th><th>Hecho</th></tr>
+            <tr><td>Sentadilla libre o en smith</td><td>4</td><td>8-12</td><td><input type="checkbox" data-id="miercoles1"></td></tr>
+            <tr><td>Prensa de pierna</td><td>4</td><td>10-12</td><td><input type="checkbox" data-id="miercoles2"></td></tr>
+            <tr><td>Curl femoral (máquina)</td><td>3</td><td>10-12</td><td><input type="checkbox" data-id="miercoles3"></td></tr>
+            <tr><td>Extensiones de cuadriceps (máquina)</td><td>3</td><td>10-12</td><td><input type="checkbox" data-id="miercoles4"></td></tr>
+            <tr><td>Elevaciones de talón (gemelos)</td><td>4</td><td>12-15</td><td><input type="checkbox" data-id="miercoles5"></td></tr>
+            <tr><td>Elevaciones de piernas</td><td>3</td><td>12-15</td><td><input type="checkbox" data-id="miercoles6"></td></tr>
+            <tr><td>Plancha</td><td>3</td><td>30-60 seg</td><td><input type="checkbox" data-id="miercoles7"></td></tr>
+            <tr><td>Crunches</td><td>3</td><td>15-20 seg</td><td><input type="checkbox" data-id="miercoles8"></td></tr>
+        </table>
+    </div>
+</div>
+
+<!-- JUEVES -->
+<div class="day">
+    <div class="day-header"><h1>Jueves</h1> - Hombros + Trapecio</div>
+    <div class="table-container">
+        <table>
+            <tr><th>Ejercicio</th><th>Series</th><th>Repeticiones</th><th>Hecho</th></tr>
+            <tr><td>Press militar con barra o mancuerna</td><td>4</td><td>8-12</td><td><input type="checkbox" data-id="jueves1"></td></tr>
+            <tr><td>Elevaciones laterales con mancuerna</td><td>3</td><td>10-12</td><td><input type="checkbox" data-id="jueves2"></td></tr>
+            <tr><td>Elevaciones frontales con mancuerna</td><td>3</td><td>10-12</td><td><input type="checkbox" data-id="jueves3"></td></tr>
+            <tr><td>Pájaros o revese fly (posterior)</td><td>3</td><td>10-12</td><td><input type="checkbox" data-id="jueves4"></td></tr>
+            <tr><td>Encogimientos para trapecio</td><td>3</td><td>12-15</td><td><input type="checkbox" data-id="jueves5"></td></tr>
+        </table>
+    </div>
+</div>
+
+<!-- VIERNES -->
+<div class="day">
+    <div class="day-header"><h1>Viernes</h1> - Full Body + Core + Cardio</div>
+    <div class="table-container">
+        <table>
+            <tr><th>Ejercicio</th><th>Series</th><th>Repeticiones</th><th>Hecho</th></tr>
+            <tr><td>Sentadilla con barra</td><td>4</td><td>8-12</td><td><input type="checkbox" data-id="viernes1"></td></tr>
+            <tr><td>Press banca</td><td>4</td><td>8-12</td><td><input type="checkbox" data-id="viernes2"></td></tr>
+            <tr><td>Remo con barra</td><td>4</td><td>8-12</td><td><input type="checkbox" data-id="viernes3"></td></tr>
+            <tr><td>Press militar</td><td>4</td><td>8-12</td><td><input type="checkbox" data-id="viernes4"></td></tr>
+            <tr><td>Dominadas o jalon con polea</td><td>4</td><td>8-12</td><td><input type="checkbox" data-id="viernes5"></td></tr>
+            <tr><td>Cardio (caminadora o bici)</td><td>1</td><td>15-20 min</td><td><input type="checkbox" data-id="viernes6"></td></tr>
+        </table>
+    </div>
+</div><br><br>
+
+<!-- Barra de progreso general -->
+<div class="progress-container">
+    <div class="progress-bar" id="progressBar">0%</div>
+</div><br><br><br>
+
+<!-- Botones flotantes -->
+<button class="reset-button" onclick="resetChecks()" title="Reset">⟳</button>
+<button class="back-button" onclick="window.location.href='index.html'" title="Inicio">
+  <i class="fas fa-house"></i>
+</button>
+
+<!-- Al final de toda la página -->
+<div style="text-align:center; margin: 40px 0;">
+    <button onclick="window.location.href='s.html'" 
+            style="padding:12px 25px; font-size:18px; background-color:#a51010a7; color:white; border:none; border-radius:8px; cursor:pointer; transition:0.2s;">
+
+    </button>
+</div>
+
+
+<!-- JS externo -->
+<script src="genaro.js"></script>
+</body>
+</html>

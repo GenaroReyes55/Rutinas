@@ -1,0 +1,150 @@
+/* Fondo personalizado */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('spider2.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+/* Contenedor de login */
+#login-container {
+  text-align: center;
+  background-color: rgba(35, 34, 34, 0.87); /* semi-transparente */
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(104, 104, 104, 0.22);
+  margin-bottom: 20px;
+}
+
+#login-container input {
+  padding: 10px;
+  width: 150px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-size: 16px;
+}
+
+#login-container button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #730202ad;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#login-container button:hover {
+  background-color: #a51010a7;
+  transform: translateY(-2px);
+}
+
+#login-container h2 {
+  margin-bottom: 20px;
+  color: #ffffff8a;
+}
+
+/* Tabla */
+h1 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px #000000;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 320px;
+  background-color: rgba(57, 57, 57, 0.85);
+  box-shadow: 0 10px 25px rgba(255, 221, 221, 0.26);
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+/* Encabezado primera columna */
+th:first-child {
+  color: #ffffff; 
+  font-weight: bold;
+}
+
+/* Primera columna */
+td:first-child {
+  color: #ffffff; 
+  font-weight: bold;
+}
+
+th {
+  background-color: rgba(176, 7, 7, 0.57);
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+td.valor-cell {
+  width: 50%;
+  max-width: 50%;
+  min-width: 50%;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: rgba(57, 57, 57, 0.85);
+}
+
+/* Mensaje de error */
+#error-msg {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Botones flotantes estilo glass */
+.boton-flotante {
+  position: fixed;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background: rgba(115, 2, 2, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.boton-flotante:hover {
+  background: rgba(165, 16, 16, 0.6);
+  transform: translateY(-2px);
+}
+
+.boton-flotante svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.boton-flotante.derecha {
+  right: 20px;
+}
+
+.boton-flotante.izquierda {
+  left: 20px;
+}
